@@ -303,7 +303,7 @@ const Chat = () => {
                     <div className={styles.chatInput}>
                         <QuestionInput
                             clearOnSend
-                            placeholder="Type a new question (e.g. does my plan cover annual eye exams?)"
+                            placeholder="How to calculate a flange according to AD2000"
                             disabled={isLoading}
                             onSend={question => makeApiRequest(question)}
                         />

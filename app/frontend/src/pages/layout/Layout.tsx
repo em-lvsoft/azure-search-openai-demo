@@ -2,6 +2,8 @@ import { Outlet, NavLink, Link } from "react-router-dom";
 
 import github from "../../assets/github.svg";
 
+import lvsoftlogo from "../../assets/lvsoft.svg";
+
 import styles from "./Layout.module.css";
 
 import { useLogin } from "../../authConfig";
@@ -14,7 +16,7 @@ const Layout = () => {
             <header className={styles.header} role={"banner"}>
                 <div className={styles.headerContainer}>
                     <Link to="/" className={styles.headerTitleContainer}>
-                        <h3 className={styles.headerTitle}>GPT + Enterprise data | Sample</h3>
+                        <h3 className={styles.headerTitle}>LV Soft AI Search</h3>
                     </Link>
                     <nav>
                         <ul className={styles.headerNavList}>
@@ -29,20 +31,20 @@ const Layout = () => {
                                 </NavLink>
                             </li>
                             <li className={styles.headerNavLeftMargin}>
-                                <a href="https://aka.ms/entgptsearch" target={"_blank"} title="Github repository link">
+                                <a href="https://lv-soft.net" target={"_blank"} title="LV-Soft link">
                                     <img
-                                        src={github}
-                                        alt="Github logo"
-                                        aria-label="Link to github repository"
-                                        width="20px"
-                                        height="20px"
-                                        className={styles.githubLogo}
+                                        src={lvsoftlogo}
+                                        alt="Lvsoft logo"
+                                        aria-label="Link to LV-Soft"
+                                        width="40px"
+                                        height="40px"
+                                        className={styles.lvsoftLogo}
                                     />
                                 </a>
                             </li>
                         </ul>
                     </nav>
-                    <h4 className={styles.headerRightText}>Azure OpenAI + AI Search</h4>
+                    <h4 className={styles.headerRightText}></h4>
                     {useLogin && <LoginButton />}
                 </div>
             </header>
